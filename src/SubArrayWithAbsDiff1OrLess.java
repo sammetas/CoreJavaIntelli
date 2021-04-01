@@ -29,10 +29,10 @@ public class SubArrayWithAbsDiff1OrLess {
           if(Math.abs(list.get(i)-list.get(j))<=1){
               if(count==0){
                   count=2;
-                //  maxCount=count;
+
               }else{
                   count++;
-                //  maxCount=count;
+
               }
               if(count>maxCount){
                   maxCount=count;
@@ -42,7 +42,7 @@ public class SubArrayWithAbsDiff1OrLess {
 
 
               i=j;
-            //  maxCount=count;
+
               count=0;
           }
       }
