@@ -6,6 +6,7 @@ public class LonelyInt {
 
 
         List<Integer> list= Arrays.asList(new Integer[]{1,1,4,3,2,3,4,5,7,7,8,8});
+
         Map<Integer,Integer> map=new HashMap<>();
         list.stream().forEach(i -> {
             if(map.containsKey(i)){

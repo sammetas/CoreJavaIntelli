@@ -2,7 +2,7 @@ public class AllSubStrings {
 
     public static void main(String[] args) {
 
-        String str="ABC";
+        String str="ABCDE";
 
 
          for(int i=0;i<str.length();i++){
