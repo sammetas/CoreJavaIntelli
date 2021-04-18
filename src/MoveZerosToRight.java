@@ -10,7 +10,7 @@ public class MoveZerosToRight {
             if(ar[i]==0 ){
 
                   while(ar[j]==0){
-                      System.out.println(ar[j]);
+                     // System.out.println(ar[j]);
                       j--;
                   }
                   int t=ar[i];

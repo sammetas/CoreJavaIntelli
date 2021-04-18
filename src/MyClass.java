@@ -1,3 +1,6 @@
+/*
+NetCracker interview sample file
+ */
 public class MyClass {
 
 
