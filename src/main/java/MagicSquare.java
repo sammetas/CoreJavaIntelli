@@ -10,8 +10,10 @@ For string 12345678 and height 3, the pattern is
 3 4 5
 2   6
 1 8 7
-For string x and height 2, the pattern is
-
+For string xy and height 3, the pattern is
+x y x
+y   y
+x y x
 x x
 x x
  */

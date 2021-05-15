@@ -3,7 +3,10 @@ public class RotateArray {
 
         int a[]={1,2,3};
         int k=2;
-
+        for(int ii=0;ii<a.length;ii++){
+            System.out.print(a[ii]+",");
+        }
+        System.out.println();
         while(k>0){
 
             int t=a[a.length-1];
@@ -14,11 +17,15 @@ public class RotateArray {
             }
             a[0]=t;
         k--;
+            for(int ii=0;ii<a.length;ii++){
+                System.out.print(a[ii]+",");
+            }
+            System.out.println();
         }
 
-        for(int i=0;i<a.length;i++){
+       /* for(int i=0;i<a.length;i++){
             System.out.print(a[i]+",");
         }
-        System.out.println();
+        System.out.println();*/
     }
 }

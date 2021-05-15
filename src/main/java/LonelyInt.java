@@ -10,7 +10,13 @@ public class LonelyInt {
         List<Integer> list= Arrays.asList(new Integer[]{1,1,4,3,2,3,4,5,7,7,8,8});
         Set<Integer> tSet= new HashSet<>();
 
-
+             for(int i=0;i<list.size();i++){
+               //  System.out.println(list.indexOf(list.get(i)));
+               //  System.out.println(list.lastIndexOf(list.get(i)));
+                 if((list.indexOf(list.get(i))==list.lastIndexOf(list.get(i)))){
+                     System.out.println("Lonely logic::"+list.get(i));
+                 }
+             }
 
         Map<Integer,Integer> map=new HashMap<>();
         list.stream().forEach(i -> {

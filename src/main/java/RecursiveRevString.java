@@ -12,8 +12,8 @@ static int i=0;
         if(str.length()==0){
             return  str;
         }
-        System.out.println(str.substring(1)+" "+i++ +" "+str.charAt(0));
-        return reverse(str.substring(1))+str.charAt(0);
+       // System.out.println(str.substring(1)+" "+i++ +" "+str.charAt(0));
+        return reverse(str.substring(1)) + str.charAt(0);
     }
 
     private static int fact(int n){

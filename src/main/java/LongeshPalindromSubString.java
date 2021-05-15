@@ -1,7 +1,7 @@
 /*
  to find a longest palindrome sub string from a given string
  */
-
+//JAVA BRAINS KAUSHIK APPROACH
 public class LongeshPalindromSubString {
 int resultStart;
 int resultLength;

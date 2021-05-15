@@ -80,8 +80,7 @@ List<Integer> ranked= Arrays.asList(new Integer[]{100,90,90,80,75,60});
                         Map.Entry::getKey, Map.Entry::getValue,
                         (x, y) -> x, () -> new TreeMap<>((a, b) -> 1)
                 ));
-        return
-                map;
+        return     map;
     }
 
 

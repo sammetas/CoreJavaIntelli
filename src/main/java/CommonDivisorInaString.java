@@ -3,8 +3,8 @@ import java.util.LinkedList;
 public class CommonDivisorInaString {
     public static void main(String[] args) {
 
-        String str1="helloworldabcdefgoeir";
-        String str2="alskdfhabcdefg980s9dfh";
+        String str1="xabciopsd";
+        String str2="yabcuopsd";
  String cdiv="";
         String maxSub="";
 

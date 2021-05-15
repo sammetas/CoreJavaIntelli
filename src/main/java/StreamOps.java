@@ -1,5 +1,6 @@
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamOps {
@@ -21,7 +22,10 @@ public class StreamOps {
 List<Integer> all=Stream.of(flatListEx1,flatListEx2,flatListEx3).flatMap(l->l.stream()).collect(Collectors.toList());
         System.out.println(all);
 
-        //flatListEx1.stream().flatMap(l->l.stream().)
+       int[][] ax={{1,2,3},{4,5,6},{7,8,9}};
+
+    //   Stream.of(ax).flatMap(x-> IntStream.range(0,x.length)).forEach(x-> System.out.println(x));
+        Stream.of(ax).flatMapToInt(Arrays::stream).forEach(System.out::print);
     }
 }
 

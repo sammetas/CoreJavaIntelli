@@ -1,3 +1,5 @@
+import java.util.concurrent.CountDownLatch;
+
 /*
 NetCracker interview sample file
  */
@@ -11,6 +13,7 @@ public class MyClass {
         System.out.println(a);
     }
     public static void main(String[] args) {
+        CountDownLatch countDownLatch=new CountDownLatch(3);
         AddInter in=(a,b)->{return  a+b;};
         System.out.println(in.add(10,29));
 
@@ -39,6 +42,8 @@ public class MyClass {
 
 class A{
 
+    private String name;
+
     A(){}
     int display(int x){
         return  x*x;
@@ -59,8 +64,22 @@ class B extends  A{
 @FunctionalInterface
 interface  AddInter{
     int add(int x,int y);
+    default void meth(){
+        System.out.println("hello");
+
+    }
+
 }
 
+
+class AA{
+    public  void meth1(){
+        AddInter io=  ( x,  y)-> { return  x*y;};
+        System.out.println(io.add(1011,20));
+
+    }
+
+}
 
 
 

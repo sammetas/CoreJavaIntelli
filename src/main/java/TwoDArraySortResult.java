@@ -1,9 +1,10 @@
+import java.io.BufferedReader;
 import java.util.*;
 /*
 solve below hackerrank problem of persistant systems
 1. Create a two dimensanal array with list values and its elements frequencies
 2. Sort it by Frequency in descending order
-3 Then again sort by its values.
+3 Then again sort by its values if their frequences equal.
  */
 public class TwoDArraySortResult {
 
@@ -13,7 +14,7 @@ List<Integer> new2= new LinkedList<>();
 
 
         List<List<Integer>> finalList= new ArrayList<>();
-        List<Integer> orgList= Arrays.asList(new Integer[]{1,3,5,2,1,2,5,2,1,7,7,23,48,2,3,4});
+        List<Integer> orgList= Arrays.asList(new Integer[]{3,3,1,2,1});
 
         HashMap<Integer,Integer> map = new HashMap<>();
 
@@ -34,7 +35,10 @@ List<Integer> new2= new LinkedList<>();
         Collections.sort(entryList, new Comparator<Map.Entry<Integer, Integer>>() {
             @Override
             public int compare(Map.Entry<Integer, Integer> o1, Map.Entry<Integer, Integer> o2) {
-                return o1.getKey().compareTo(o2.getKey());
+                 if(o1.getValue()==o2.getValue()) {
+                     return o1.getKey().compareTo(o2.getKey());
+                 }
+                 return 0;
             }
         });
         System.out.println("Again sorted::"+entryList);
@@ -45,6 +49,7 @@ List<Integer> new2= new LinkedList<>();
             tList.add(entry.getValue());
             finalList.add(tList);
         }
+
         System.out.println(finalList);
     }
 }
