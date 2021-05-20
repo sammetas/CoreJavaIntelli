@@ -37,7 +37,8 @@ class Lock{
 
           synchronized (this.id){
             this.id=id;
-       }    notifyAll();
+       }
+          notifyAll();
         System.out.println("Modified Values::"+this.name+" and id "+this.id );
     }
 }

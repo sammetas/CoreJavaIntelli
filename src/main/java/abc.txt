@@ -1,4 +1,56 @@
+iops
 my name is samm and my city is machilipatnam period.
 heloo mister
 how do you
 ABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDE
+
+docker build . -t <<image_name>> (say restex) .
+docker run -p 8081:8081 -t restex
+to list all prject files using linux promp(sh)
+docker run -it <<image/Container>> sh
+public class SampleJava {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+        System.out.println("hello 2");
+        System.out.println("hello 3");
+        System.out.println("hello 4");
+        System.out.println("hello 5");
+    }
+}package com.javasampleapproach.resttemplatesecurity.customize;
+catchmeifyoucan
+ import org.apache.http.auth.AuthScope;
+ import org.apache.http.auth.UsernamePasswordCredentials;
+ import org.apache.http.client.CredentialsProvider;
+ import org.apache.http.client.HttpClient;
+ import org.apache.http.impl.client.BasicCredentialsProvider;
+ import org.apache.http.impl.client.HttpClientBuilder;
+ import org.springframework.http.client.ClientHttpRequestFactory;
+ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+ import org.springframework.web.client.RestTemplate;
+
+ public class RestTemplateBuilder {
+ 	public static RestTemplate securityRestTemplateBuilder(String username, String password){
+ 		HttpClient httpClient = createHttpClient(username, password);
+
+ 		ClientHttpRequestFactory requestFactory = createRequestFactory(httpClient);
+ 		RestTemplate restTemplate = new RestTemplate(requestFactory);
+ 		return restTemplate;
+ 	}
+
+ 	private static ClientHttpRequestFactory createRequestFactory(HttpClient httpClient){
+ 		HttpComponentsClientHttpRequestFactory clientHttpRequestFactory= new HttpComponentsClientHttpRequestFactory();
+ 		clientHttpRequestFactory.setHttpClient(httpClient);
+ 		return clientHttpRequestFactory;
+ 	}
+
+ 	private static HttpClient createHttpClient(String username, String password){
+ 		CredentialsProvider provider = new BasicCredentialsProvider();
+ 		UsernamePasswordCredentials credentials = new UsernamePasswordCredentials(username, password);
+ 		provider.setCredentials(AuthScope.ANY, credentials);
+
+ 		HttpClient client = HttpClientBuilder.create().setDefaultCredentialsProvider(provider).build();
+ 		return client;
+ 	}
+ }
+
+sops
