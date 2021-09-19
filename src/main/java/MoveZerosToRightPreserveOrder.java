@@ -1,5 +1,5 @@
 /*
-move all zeros to right hand side but order shoudl not change
+move all zeros to right hand side but order should not change
  */
 public class MoveZerosToRightPreserveOrder {
     public static void main(String[] args) {
