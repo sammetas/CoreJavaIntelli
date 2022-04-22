@@ -1,27 +1,22 @@
+/*
+find out the common words between a and b  strings
+ */
 public class EpamStrings {
     public static void main(String[] args) {
         String a="aworldthing";
-        String b="hworld";
+        String b="othings";
 
         //int j=0;
         String sub="";
         for(int i=0;i<a.length();i++){
-    int j=0;
-            while (j<b.length()){
+    int j=0;sub="";
+            while (j<b.length()-1){
 
                 if(a.charAt(i)==b.charAt(j)){
 
 
                     sub+=b.charAt(j);
                     i++;
-
-                }else {
-
-                    if(sub.length()>0)
-                    System.out.println(sub);
-
-                   // break;
-
 
                 }
 

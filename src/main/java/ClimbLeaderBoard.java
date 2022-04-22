@@ -29,7 +29,7 @@ List<Integer> ranked= Arrays.asList(new Integer[]{100,90,90,80,75,60});
 
 
 
-        //System.out.println(mapT);
+        System.out.println(mapT);
 
        // System.out.println(mapT);
        Map<Integer,Integer> map=sortWithDupes(mapT);
@@ -60,7 +60,7 @@ List<Integer> ranked= Arrays.asList(new Integer[]{100,90,90,80,75,60});
             int size= 0;
             Set<Map.Entry<Integer,Integer>> set=map.entrySet();
             for (Map.Entry<Integer,Integer> entry:set){
-                System.out.println("sizz"+set.size());
+              //  System.out.println("sizz"+set.size());
                 if(set.size()-1==size++){
                     System.out.println("nevercoming");
                      key=entry.getKey()+1;

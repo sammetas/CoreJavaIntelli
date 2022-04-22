@@ -1,6 +1,7 @@
 import java.math.BigInteger;
 import java.text.ParseException;
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -38,6 +39,7 @@ public class BackBase1 {
         List<HashMap<String,UserStats>> list=new ArrayList<>();
         Arrays.stream(visits).forEach(list::add);
         System.out.println(list);
+        System.out.println(Arrays.stream(visits).map(visit->visit.values().stream().map(m->m.getVists()).count()).count());
 
             
 
