@@ -1,6 +1,7 @@
+
 public class MinMaxDiff {
     public static void main(String[] args) {
-        int a[]={12, 34, 10, 6, 40};
+        int a[]={-1,12, 50,34, 10, 0, 40};
 
         int min=a[0];
         int max=a[0];
@@ -14,6 +15,6 @@ public class MinMaxDiff {
                 min=a[i];
             }
         }
-        System.out.println(max+min);
+        System.out.println(max+" and "+min);
     }
 }
