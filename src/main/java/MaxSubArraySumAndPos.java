@@ -1,3 +1,5 @@
+import static java.lang.Math.max;
+
 /*
 https://www.baeldung.com/java-maximum-subarray#:~:text=The%20maximum%20subarray%20problem%20is,sum%20in%20any%20given%20array.&text=In%20this%20tutorial%2C%20we'll,n)%20time%20and%20space%20complexity.
 https://leetcode.com/problems/maximum-subarray/submissions/
@@ -8,7 +10,7 @@ public class MaxSubArraySumAndPos {
 int start=0;int end=0;
         int maxSoFar=a[0]; int maxEndHere=a[0];
 
-        for(int i=1;i<a.length;i++){
+      for(int i=1;i<a.length;i++){
             if(a[i] > maxEndHere + a[i]){
                 start=i;
                 maxEndHere = a[i];
@@ -21,6 +23,15 @@ int start=0;int end=0;
             }
         }
         System.out.println("maxSoFar::"+maxSoFar);
+
+
+       /* int temp = a[0];
+        int max = a[0];
+        for(int i=1;i<a.length;i++){
+         temp = max(a[i],temp+a[i]);
+         max = max(temp,max);
+        }
+        System.out.println("maxSoFar::"+max);*/
 
     }
 }
