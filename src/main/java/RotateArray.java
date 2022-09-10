@@ -1,21 +1,26 @@
 public class RotateArray {
     public static void main(String[] args) {
 
-        int a[]={1,2,3};
+        int a[]={1,2,3,4};
         int k=2;
+        if(k>a.length)k%=a.length;
         for(int ii=0;ii<a.length;ii++){
             System.out.print(a[ii]+",");
         }
         System.out.println();
         while(k>0){
-
-            int t=a[a.length-1];
-            int i=a.length-1;
+         int i=a.length-1;
             while(i>0){
+                int t= a[i];
                 a[i]=a[i-1];
+                a[i-1] = t;
                 i--;
             }
-            a[0]=t;
+            for(int ii=0;ii<a.length;ii++){
+                System.out.print(a[ii]+",");
+            }
+            System.out.println();
+
         k--;
             for(int ii=0;ii<a.length;ii++){
                 System.out.print(a[ii]+",");

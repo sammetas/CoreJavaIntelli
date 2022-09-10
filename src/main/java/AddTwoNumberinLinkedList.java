@@ -1,12 +1,16 @@
 import java.math.BigDecimal;
 import java.math.BigInteger;
+/*
+  l1 = 8->0->3
+  l2 =  9->1
+ */
 
 public class AddTwoNumberinLinkedList {
 
     public static void main(String[] args) {
 
 
-          BigDecimal one = new BigDecimal("803");
+        BigDecimal one = new BigDecimal("803");
         BigDecimal two = new BigDecimal("91");
 
         BigDecimal b1 = one.remainder(BigDecimal.valueOf(10));
