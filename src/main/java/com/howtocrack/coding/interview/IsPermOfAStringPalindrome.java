@@ -13,23 +13,21 @@ import java.util.stream.Collectors;
   Output: False
  */
 public class IsPermOfAStringPalindrome {
-
     public  boolean isPermutationsIsPalindrome(String a){
         a = a.replaceAll(" ","").toLowerCase();
-
-        Map<Character,Long> map = a.chars().mapToObj(o->(char)o).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
-        boolean isOne = false;
+        Map<Character,Long> map = a.chars().mapToObj(o->(char)o)
+                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+        boolean foundOdd = false;
         boolean isAllTwo = false;
         for(Long i: map.values()) {
-            if (!isOne && i == 1) {
-                isOne = true;
-            } else if (i == 2) {
-                isAllTwo = true;
-            } else {
-                return false;
+            if(i%2 == 1) {
+                if (foundOdd)
+                    return false;
+                foundOdd = true;
             }
-        }
-            return isOne && isAllTwo;
+
+            }
+         return true;
         }
     }
 

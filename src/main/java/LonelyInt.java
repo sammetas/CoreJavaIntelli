@@ -6,7 +6,6 @@ public class LonelyInt {
 
     public static void main(String[] args) {
 
-
         List<Integer> list= Arrays.asList(1,1,4,3,2,3,4,5,7,7,8,8);
         Set<Integer> tSet= new HashSet<>();
 

@@ -12,6 +12,7 @@ import static org.junit.Assert.*;
 class TestCases {
 
 
+
     @Before
     public void getReadEmp(){
         TestEmployee t1= new TestEmployee(1,"samm",83893.9);

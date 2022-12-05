@@ -20,7 +20,7 @@ public class ReverseLinkedListAgain {
         Nodes next = null;
         Nodes current = head;
 
-        while ((current != null)) {
+        while (current != null) {
             next = current.next;
             current.next = prev;
             prev =  current;

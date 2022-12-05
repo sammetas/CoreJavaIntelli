@@ -7,10 +7,10 @@ public class TestPermPalin {
     @Test
     public void testPermPalindrome(){
         IsPermOfAStringPalindrome isPermOfAStringPalindrome = new IsPermOfAStringPalindrome();
-        boolean actual = isPermOfAStringPalindrome.isPermutationsIsPalindrome("madamy");
-        Assert.assertEquals(false,actual);
+        boolean actual = isPermOfAStringPalindrome.isPermutationsIsPalindrome("mamamam");
+        Assert.assertEquals(true,actual);
         boolean actual1 = isPermOfAStringPalindrome.isPermutationsIsPalindrome("Tact Coa");
-        Assert.assertEquals(true,actual1);
+         Assert.assertEquals(true,actual1);
 
     }
 }
