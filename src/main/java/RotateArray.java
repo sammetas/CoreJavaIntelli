@@ -1,8 +1,9 @@
 public class RotateArray {
     public static void main(String[] args) {
 
-        int a[]={1,2,3,4};
-        int k=2;
+        int a[]={1,2,3,4,5};
+        int k=3;
+        //OUtput: 3,4,2,1 when k=2
         if(k>a.length)k%=a.length;
         for(int ii=0;ii<a.length;ii++){
             System.out.print(a[ii]+",");

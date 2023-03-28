@@ -31,6 +31,8 @@ public class BackBase1 {
 
          Map<Long,Long> l0= callMethod(m1,m2,m3);
         Map<Long,Long> l1= callMethod(m4,m5);
+        System.out.println(l0);
+        System.out.println(l1);
 
     }
 
@@ -39,8 +41,8 @@ public class BackBase1 {
         List<HashMap<String,UserStats>> list=new ArrayList<>();
         Arrays.stream(visits).forEach(list::add);
         System.out.println(list);
-        System.out.println(Arrays.stream(visits).map(visit->visit.values().stream().map(m->m.getVists()).count()).count());
-
+        System.out.println(Arrays.stream(visits).map(visit->visit.values().stream().map(UserStats::getVists).count()).count());
+        //Arrays.stream(visits).map(x -> x:: )
             
 
         return  map1;

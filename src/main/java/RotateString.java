@@ -1,5 +1,5 @@
 public class RotateString {
-//output: countryilove
+//output: countryilovemy
     public static void main(String[] args) {
         String str="ilovemycountry";
         String word="country";
