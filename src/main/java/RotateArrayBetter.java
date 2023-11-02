@@ -1,12 +1,12 @@
 public class RotateArrayBetter {
     public static void main(String[] args) {
-        int[] a = {1, 2, 3, 4, 5};
+        int[] a = {1, 2, 3, 4, 5,6,7};
         int k = 3;
         k = (k > a.length) ? k %= a.length : k;
         int[] res = new int[a.length];
 
         for (int i = 0; i < k; i++) {
-            res[i] = a[a.length-1 - k + i];
+            res[i] = a[a.length - k + i];
         }
         int ii = 0;
         for (int j = k; j < a.length; j++) {

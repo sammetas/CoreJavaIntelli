@@ -10,6 +10,9 @@ import java.util.stream.Stream;
 
 public class JustStreamEx {
     public static void main(String[] args) {
+
+        int[] a2 = {1,2,3,4,5,6,97,108};
+        System.out.println(Arrays.stream(a2).filter(a1->a1%2 == 0).max().getAsInt());
         List<Integer> numbers
                 = Arrays.asList(11, 22, 33, 44,
                 55, 66, 77, 88,

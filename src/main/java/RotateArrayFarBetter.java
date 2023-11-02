@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class RotateArrayFarBetter {
     public static void main(String[] args) {
         int[] a = {1, 2, 3, 4, 5,6,7};
-        int k = 1;
+        int k = 3;
         k = k % a.length ;
         int l = a.length-k;
         reverse(a,0,l-1);

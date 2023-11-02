@@ -1,6 +1,7 @@
 
 public class MinMaxDiff {
     public static void main(String[] args) {
+        System.out.println(Integer.toBinaryString(18));
         int a[]={-1,12, 50,34, 10, 0, 40};
 
         int min=a[0];

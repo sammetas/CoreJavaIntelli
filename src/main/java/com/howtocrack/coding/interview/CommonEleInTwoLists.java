@@ -37,7 +37,8 @@ public class CommonEleInTwoLists {
          for(int i =0 ;i<a.size();i++){
              if(a.get(i) >= b.get(k)){
                  if(Arrays.binarySearch(b.toArray(),a.get(i)) >=0 ){
-                     System.out.print(a.get(i)+",");k++;
+                     System.out.print(a.get(i)+",");
+                     k++;
                  }
              }
          }
