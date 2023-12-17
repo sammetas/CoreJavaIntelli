@@ -60,7 +60,7 @@ Future<String> strings=f.getFutureStrings("youcan");
                     list = Files.
                             readAllLines(Path.of("D:\\MicroWorkSpace\\CoreJavaIntelli\\src\\main\\java\\abc.txt"));
                     list.stream().filter(line -> line.contains(search))
-                            .collect(Collectors.toList()).forEach(sb::append);
+                            .toList().forEach(sb::append);
 
                 } catch (IOException e) {
                     e.printStackTrace();

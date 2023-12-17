@@ -10,7 +10,6 @@ import java.util.stream.Stream;
 public class DeleteFromArray {
     public static void main(String[] args) {
         int a[]={12,2,3,4,5,6};
-
         int toBeRemoved=6; //if its a value not index
 
         int newArr[]=new int[a.length-1] ;

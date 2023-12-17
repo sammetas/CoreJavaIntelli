@@ -9,12 +9,12 @@ class TwoSum {
         HashMap<Integer,Integer> map = new HashMap<>();
         
         for(int i=0;i<nums.length;i++){
-         
 
-            if(map.containsKey(nums[i])){
-                return new int[]{i,map.get(nums[i])};
+            int temp = target-nums[i];
+            if(map.containsKey(temp)){
+                return new int[]{i,map.get(temp)};
             }
-            map.put(target-nums[i],i);
+            map.put(nums[i],i);
             
         }
     return res;
@@ -29,7 +29,11 @@ class TwoSum {
         }
         int target= Arrays.asList(528 ,129 ,376 ,504 ,543, 363 ,213 ,138 ,206 ,440 ,504 ,418).stream().reduce(0,(a1,b)->a1+b)/2;
         System.out.println(target);
+
         int res[]=new TwoSum().twoSum(a,target);
         System.out.printf("res::"+res[0]+","+res[1]);
+        int b[] = {1,2,3,10,19}; int t = 5;
+        int res1[]=new TwoSum().twoSum(b,t);
+        System.out.printf("res1::"+res1[0]+","+res1[1]);
     }
 }

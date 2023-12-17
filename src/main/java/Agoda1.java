@@ -1,8 +1,8 @@
 /*
   given a {1,2,1,2,3,2,2,2,6,7,6}
   output: 6 : {1,2,1},{2,1,2} , {2,3,2},{3,2,2} ,{2,2,6} , {6,7,6}
-  consider trplets {1,2,1} ,{2,1,2} ,{1,2,3} etc
-  count the trplets such that atleast one number should be repeated in a triplet ex. {1,2,1}
+  consider triplets {1,2,1} ,{2,1,2} ,{1,2,3} etc
+  count the triplets such that at least one number should be repeated in a triplet ex. {1,2,1}
   ignore {1,2,3} and {2,2,2}
 
 */

@@ -17,7 +17,7 @@ class BFSBread {
 
         Queue<int[]> queue = new ArrayDeque<>();
         int days = 0;
-        int coordinates[] = {elementX, elementY};
+        int[] coordinates = {elementX, elementY};
         queue.add(coordinates);
 
         while (!queue.isEmpty()) { //bfs enters

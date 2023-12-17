@@ -14,6 +14,7 @@ public class CommonEleInTwoLists {
       //  List<Integer> a = Arrays.asList(1,4,5,6,7,8,90,143);
         List<Integer> a = Arrays.asList(13,27,35,40,49,55,59);
         List<Integer> b = Arrays.asList(17,35,39,40,55,58,60);
+        System.out.println("bSearch returns::"+Arrays.binarySearch(a.toArray(),592));
         //approach -1 O(N2)
         System.out.println("common eles are:");
         for(int i=0;i<a.size();i++){

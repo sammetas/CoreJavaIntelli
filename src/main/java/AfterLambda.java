@@ -10,18 +10,25 @@ public class AfterLambda {
 int am=10;
 int pm=20;
 
+
         LambSumInter inn = (a,b)->{
             return a+b;
         };
         System.out.println(inn.absMeth(am,pm));
-        // similarly we have existing funcational interfaces
+        // similarly we have existing functional interfaces
 
         Predicate<Integer> EVEN=(a)->a%2==0;
         Predicate<Integer>  ODD=(a)->a%2!=0;
+        Predicate<Integer> PRIME = (a) ->{
+            for(int i = 2; i<=Math.sqrt(a);i++){
+                if(a%i == 0) return false;
+            }
+            return true;
+        };
 
 
-        List<Integer> list = Arrays.asList(1,2,3,4,5,6,8,9,9,28364,4,6);
-        LinkedHashMap<Integer,Integer> anewList =  list.stream().filter(EVEN).collect(Collectors.toMap(x->x,x->x*2,(k,v)-> k+v,LinkedHashMap::new));
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6,13,25,49,37,8,9,9,28364,4,6);
+        LinkedHashMap<Integer,Integer> anewList =  list.stream().filter(ODD).filter(PRIME).collect(Collectors.toMap(x->x,x->x*2,(k,v)-> k+v,LinkedHashMap::new));
 
 
         System.out.println(anewList);

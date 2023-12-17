@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 /*
@@ -20,10 +21,11 @@ public class MergeTwoSortedLists {
 
         System.out.println(list1 +" - "+list2);
 
-        List<Integer> list3 = Stream.of(list1,list2).flatMap(integers -> integers.stream()).collect(Collectors.toList());
+        List<Integer> list3 = Stream.of(list1,list2).flatMap(Collection::stream).collect(Collectors.toList());
+        list3.sort(Integer::compareTo);
         System.out.println(list3);
         Map<Integer,Integer> map = new TreeMap<>();
-        map=list3.stream().sorted((o1, o2) -> o1.compareTo(o2))
+        map=list3.stream().sorted(Integer::compareTo)
                             .collect(Collectors.toMap(Integer::intValue,Integer::intValue,
                                     (integer, integer2) -> integer2+1,TreeMap::new));
         System.out.println(map);

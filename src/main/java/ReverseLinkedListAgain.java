@@ -10,11 +10,12 @@ public class ReverseLinkedListAgain {
         n1.next.next.next=new Nodes(40);
 
         n1.printAll(n1);
-        Nodes head=reversePrint(n1);
+      //  Nodes head=reversePrint(n1);
+        Nodes head = reverseLinkedListRecursively(n1);
         n1.printAll(head);
     }
 
-    private static Nodes reversePrint(Nodes head) {
+    private static Nodes reverseList(Nodes head) {
 
         Nodes prev = null;
         Nodes next = null;
@@ -28,4 +29,18 @@ public class ReverseLinkedListAgain {
         }
         return  prev;
     }
+
+    private static Nodes reverseLinkedListRecursively(Nodes head){
+
+        //base
+        if(head == null || head.next == null){
+            return  head;
+        }
+        Nodes p = reverseLinkedListRecursively(head.next);
+        head.next.next = head;
+        head.next = null;
+     return  p;
+    }
+
+
 }

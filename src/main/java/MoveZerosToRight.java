@@ -13,7 +13,7 @@ public class MoveZerosToRight {
                      // System.out.println(ar[j]);
                       j--;
                   }
-                  int t=ar[i];
+
                   ar[i]=ar[j];
                   ar[j]=0;
             }

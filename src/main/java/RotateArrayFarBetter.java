@@ -2,8 +2,8 @@ import java.util.Arrays;
 
 public class RotateArrayFarBetter {
     public static void main(String[] args) {
-        int[] a = {1, 2, 3, 4, 5,6,7};
-        int k = 3;
+        int[] a = {1, 2, 3, 4, 5};
+        int k = 4;
         k = k % a.length ;
         int l = a.length-k;
         reverse(a,0,l-1);

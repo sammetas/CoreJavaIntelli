@@ -31,6 +31,7 @@ int resultLength;
             end++;
         }
 
+
         if(resultLength < end-begin-1 ){
             resultStart=begin+1;
             resultLength=end-begin-1;

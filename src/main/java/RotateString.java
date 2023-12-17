@@ -8,7 +8,5 @@ public class RotateString {
         System.out.println(sub1);
 
 
-
-
     }
 }

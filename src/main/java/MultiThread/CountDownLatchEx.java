@@ -1,6 +1,6 @@
 package MultiThread;
 /*
- If you declare countdown latch with 3 count, then waiting thread will wait until all thread available.
+ If you declare countdown latch with 3 count, then waiting thread will wait until all threads available.
  */
 import java.util.concurrent.CountDownLatch;
 

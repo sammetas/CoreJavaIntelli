@@ -16,8 +16,7 @@ public class ArrayDiffTarget {
         int k=2;
         System.out.println(getGrouplets(a,k)); //Brute Force
         //Optimized solution
-        List<Integer> list = new ArrayList<>();
-        list.addAll(Arrays.asList(1,2,5,3,9,7,12,10));
+        List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 5, 3, 9, 7, 12, 10));
         int countOpt = 0;
         for(int i=0;i<a.length;i++){
             if(list.contains(a[i]-k)) countOpt++;

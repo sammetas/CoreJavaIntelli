@@ -14,7 +14,7 @@ public class IntersectionOfLists {
 
         ResultNode r1 = getSize(l1);
         ResultNode r2 = getSize(l2);
-        if(r1.node != r2.node) return null; // no intersection
+        if(r1.node.val != r2.node.val) return null; // no intersection
         ListNode1 longList =null;
         ListNode1 shortList =null;
         if(r1.size>r2.size){

@@ -14,7 +14,7 @@ public class FlatMapnMap {
         HashMap<String, List<Integer>> map=new HashMap<>();
          map.put("one",l1);map.put("two",l2);map.put("three",l3);
         List<Integer> newList=new ArrayList<>();
-         List<List<Integer>> l =map.values().stream().flatMap(Stream::of).collect(Collectors.toList());
+         List<List<Integer>> l = map.values().stream().toList();
 
 
     }

@@ -14,7 +14,11 @@ public class Java8ListMapString {
         List<List<String>> allNames = Arrays.asList(names1, names2, names3);
         Map<String, Integer> namesAndLengths = names.stream().collect(toMap(name -> name, String::length, (k1, k2) -> k2, LinkedHashMap::new));
         System.out.println(namesAndLengths);
-        System.out.println(allNames);
+
+         LinkedHashMap <String,Integer> sortedByStringLength = namesAndLengths.entrySet().stream().sorted(Map.Entry.comparingByKey()).collect(toMap(Map.Entry::getKey,Map.Entry::getValue,(k1,k2)->k2,LinkedHashMap::new));
+        System.out.println("-->"+sortedByStringLength);
+        System.out.println(sortedByStringLength.entrySet().stream().map(Map.Entry::getValue).reduce(0,(len,aggrigetor)->len + aggrigetor));
+        System.out.println(sortedByStringLength.entrySet().stream().max(Comparator.comparing(Map.Entry::getValue)).get());
         Map<String,Integer> allNamesWithTheirLengths = allNames.stream().flatMap(Collection::stream).collect(toMap(name->name,name->name.length(),(k1,k2)->k1,LinkedHashMap::new));
         System.out.println(allNamesWithTheirLengths);
         System.out.println("========");
